@@ -1,0 +1,70 @@
+@body-color: #040e25;
+@body-text-color: #ffffff;
+@zone-color: #65708c;
+@text-color: #18233c;
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: @body-color;
+  color: @body-text-color;
+
+  text-align: center;
+}
+
+.app {
+  &:first-child {
+    margin-top: 25px;
+
+    & h1 {
+      text-transform: capitalize;
+    }
+  }
+}
+
+.zone-wrapper {
+  position: relative;
+
+  width: 80%;
+  margin: auto;
+
+  text-align: center;
+
+  .zone {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+
+    width: 30%;
+    height: 500px;
+
+    margin: 15px;
+
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    background-color: @zone-color;
+    color: @text-color;
+
+    .screen {
+      width: 90%;
+      height: 80%;
+
+      margin: auto;
+
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+      background-color: white;
+
+      color: @text-color;
+
+      p {
+        display: inline-block;
+        margin-top: 25px;
+
+        word-break: break-all;
+      }
+    }
+  }
+}
